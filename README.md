@@ -146,6 +146,29 @@ Created by [Parth Gajmal](mailto:prgajmal@gmail.com)
 
 ---
 
+Note: This is a custom implementation of the Model Context Protocol (MCP) design. It is not using any official MCP SDK or library, but follows the architectural pattern of connecting LLMs to external data sources in a standardized, context-aware way.
+
+🧠 Are We Using the MCP Library?
+No, we're not using the official mcp Python library from Anthropic (or any other vendor) — because:
+
+That library is still in very early dev or limited release.
+
+Our chatbot uses our own MCP-style implementation, not that exact mcp module.
+
+✅ Are We Implementing the MCP Protocol / Pattern?
+YES! 100% we are implementing the MCP (Model Context Protocol) conceptually and architecturally:
+
+✔️ We’re fetching context from multiple sources like Outlook, Google Drive, Local Files, and Teams.
+✔️ We format it into prompt context dynamically before calling the LLM (GPT-4o).
+✔️ We use a consistent, plug-and-play method to bring context into the model — exactly what MCP aims to solve.
+✔️ This fits the “open protocol to connect GPTs to tools, data, and memory” vision.
+
+So this is a custom MCP-compatible solution — not tied to Anthropic's exact codebase, but fully aligned with the MCP philosophy.
+
+
+
+---
+
 ## 🧾 License
 MIT License
 
